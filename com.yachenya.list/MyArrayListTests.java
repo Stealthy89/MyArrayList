@@ -81,7 +81,7 @@ public class MyArrayListTests extends MyArrayList {
         arrayList.add("A");
 
         Assert.assertEquals(expectedStr.set(0, "B"), arrayList.set(2, "B"));
-     //   Assert.assertEquals(expectedInt.set(1, 3), arrayList.set(0, 3));
+        Assert.assertEquals(expectedInt.set(1, 3), arrayList.set(0, 3));
     }
 
 
