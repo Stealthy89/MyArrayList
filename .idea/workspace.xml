@@ -25,8 +25,8 @@
       <file leaf-file-name="MyArrayListTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/yachenya/list/MyArrayListTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="-765">
+              <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,8 +37,8 @@
       <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="374" column="23" selection-start-line="374" selection-start-column="20" selection-end-line="374" selection-end-column="23" />
+            <state relative-caret-position="-120">
+              <caret line="482" column="13" selection-start-line="482" selection-start-column="7" selection-end-line="482" selection-end-column="13" />
               <folding>
                 <element signature="e#6252#6253#0" expanded="true" />
                 <element signature="e#6320#6321#0" expanded="true" />
@@ -61,7 +61,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/Arrays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="3177" column="7" selection-start-line="3177" selection-start-column="7" selection-end-line="3177" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="List.java" pinned="false" current-in-tab="true">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/List.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
@@ -71,26 +81,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyArrayList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyArrayList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yachenya/list/MyArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="140" column="5" selection-start-line="140" selection-start-column="5" selection-end-line="140" selection-end-column="5" />
+            <state relative-caret-position="1258">
+              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
               <folding>
-                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
                 <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#497#498#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#751#752#0" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#1508#1509#0" expanded="true" />
-                <element signature="e#1558#1559#0" expanded="true" />
-                <element signature="e#3132#3133#0" expanded="true" />
-                <element signature="e#3198#3199#0" expanded="true" />
+                <element signature="e#463#464#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#2777#2778#0" expanded="true" />
+                <element signature="e#2843#2844#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -282,8 +290,8 @@
       <recent name="com.yachenya.list" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyArrayListTests.testSet">
-    <configuration default="false" name="MyArrayListTests.testIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MyArrayListTests.testRemoveByIndex">
+    <configuration default="false" name="MyArrayListTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yachenya.list.*" />
@@ -295,7 +303,33 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yachenya.list" />
       <option name="MAIN_CLASS_NAME" value="com.yachenya.list.MyArrayListTests" />
-      <option name="METHOD_NAME" value="testIsEmpty" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyArrayListTests.testIncreaseCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.yachenya.list.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MyList" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yachenya.list" />
+      <option name="MAIN_CLASS_NAME" value="com.yachenya.list.MyArrayListTests" />
+      <option name="METHOD_NAME" value="testIncreaseCapacity" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -309,7 +343,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="MyArrayListTests.testContains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MyArrayListTests.testGetNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yachenya.list.*" />
@@ -321,7 +355,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yachenya.list" />
       <option name="MAIN_CLASS_NAME" value="com.yachenya.list.MyArrayListTests" />
-      <option name="METHOD_NAME" value="testContains" />
+      <option name="METHOD_NAME" value="testGetNegative" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -335,7 +369,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="MyArrayListTests.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MyArrayListTests.testAddVoid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.yachenya.list.*" />
@@ -347,7 +381,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.yachenya.list" />
       <option name="MAIN_CLASS_NAME" value="com.yachenya.list.MyArrayListTests" />
-      <option name="METHOD_NAME" value="testRemove" />
+      <option name="METHOD_NAME" value="testAddVoid" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -374,32 +408,6 @@
       <option name="PACKAGE_NAME" value="com.yachenya.list" />
       <option name="MAIN_CLASS_NAME" value="com.yachenya.list.MyArrayListTests" />
       <option name="METHOD_NAME" value="testRemoveByIndex" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="MyArrayListTests.testSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.yachenya.list.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="MyList" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yachenya.list" />
-      <option name="MAIN_CLASS_NAME" value="com.yachenya.list.MyArrayListTests" />
-      <option name="METHOD_NAME" value="testSet" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -667,19 +675,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testIsEmpty" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testContains" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testRemove" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testRemoveByIndex" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testSet" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.MyArrayListTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testIncreaseCapacity" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testGetNegative" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testAddVoid" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testRemoveByIndex" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testSet" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testRemoveByIndex" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testContains" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testRemove" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testIsEmpty" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testRemoveByIndex" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testAddVoid" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testGetNegative" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MyArrayListTests" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MyArrayListTests.testIncreaseCapacity" />
       </list>
     </recent_temporary>
   </component>
@@ -700,35 +708,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyArrayListTests_testRemoveByIndex - 2016.07.10 at 22h 46m 18s.xml">
+    <history-entry file="MyArrayListTests - 2016.07.12 at 01h 12m 56s.xml">
+      <configuration name="MyArrayListTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testAddVoid - 2016.07.12 at 01h 18m 03s.xml">
+      <configuration name="MyArrayListTests.testAddVoid" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testGetNegative - 2016.07.12 at 01h 14m 40s.xml">
+      <configuration name="MyArrayListTests.testGetNegative" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testGetNegative - 2016.07.12 at 01h 15m 00s.xml">
+      <configuration name="MyArrayListTests.testGetNegative" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testGetNegative - 2016.07.12 at 01h 15m 16s.xml">
+      <configuration name="MyArrayListTests.testGetNegative" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testGetNegative - 2016.07.12 at 01h 15m 43s.xml">
+      <configuration name="MyArrayListTests.testGetNegative" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testIncreaseCapacity - 2016.07.12 at 01h 03m 12s.xml">
+      <configuration name="MyArrayListTests.testIncreaseCapacity" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testIncreaseCapacity - 2016.07.12 at 01h 10m 10s.xml">
+      <configuration name="MyArrayListTests.testIncreaseCapacity" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyArrayListTests_testRemoveByIndex - 2016.07.12 at 01h 18m 55s.xml">
       <configuration name="MyArrayListTests.testRemoveByIndex" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 40m 46s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 41m 11s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 43m 32s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 45m 06s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 49m 00s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 49m 21s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 49m 39s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 50m 06s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyArrayListTests_testSet - 2016.07.10 at 22h 52m 38s.xml">
-      <configuration name="MyArrayListTests.testSet" configurationId="JUnit" />
+    <history-entry file="MyArrayListTests_testValidateIndexMore - 2016.07.12 at 00h 58m 47s.xml">
+      <configuration name="MyArrayListTests.testValidateIndexMore" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -743,7 +751,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292402" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48421052" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44210526" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -861,14 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="576" column="41" selection-start-line="576" selection-start-column="38" selection-end-line="576" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yachenya/list/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-261">
@@ -877,10 +877,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="3177" column="7" selection-start-line="3177" selection-start-column="7" selection-end-line="3177" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="374" column="23" selection-start-line="374" selection-start-column="20" selection-end-line="374" selection-end-column="23" />
+        <state relative-caret-position="-120">
+          <caret line="482" column="13" selection-start-line="482" selection-start-column="7" selection-end-line="482" selection-end-column="13" />
           <folding>
             <element signature="e#6252#6253#0" expanded="true" />
             <element signature="e#6320#6321#0" expanded="true" />
@@ -902,36 +910,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yachenya/list/MyArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding>
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#2777#2778#0" expanded="true" />
+            <element signature="e#2843#2844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/yachenya/list/MyArrayListTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+        <state relative-caret-position="-765">
+          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yachenya/list/MyArrayList.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="140" column="5" selection-start-line="140" selection-start-column="5" selection-end-line="140" selection-end-column="5" />
-          <folding>
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-            <element signature="e#3132#3133#0" expanded="true" />
-            <element signature="e#3198#3199#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="283">
+          <caret line="576" column="41" selection-start-line="576" selection-start-column="38" selection-end-line="576" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
