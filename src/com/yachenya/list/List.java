@@ -1,28 +1,29 @@
 package com.yachenya.list;
 
- interface List {
+ interface List<E> {
 
     int size();
 
     boolean isEmpty();
 
-    boolean contains(Object o);
+    boolean contains(E element);
 
-    void add(Object o);
+    void add(E element);
 
-    boolean remove(Object o);
+    boolean remove(E element);
 
     void clear();
 
-    Object get(int index);
+    E get(int index);
 
-    Object set(int index, Object element);
+    E set(int index, E element);
 
-    void add(int index, Object element);
+    void add(int index, E element);
 
-    Object remove(int index);
+    E remove(int index);
 
-    int indexOf(Object o);
+    int indexOf(E element);
 
-    int lastIndexOf(Object o);
-}
+    int lastIndexOf(E element);
+
+ }

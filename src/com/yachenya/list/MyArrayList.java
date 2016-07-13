@@ -8,14 +8,14 @@ import java.util.Arrays;
  * @author ayachenya
  */
 
-class MyArrayList implements List {
+class MyArrayList<E> implements List<E> {
 
     private static final int CAPACITY = 15;
-    private Object[] array;
+    private E[] array;
     private int size;
 
     MyArrayList() {
-        array = new Object[CAPACITY];
+        array = (E[])new Object[CAPACITY];
     }
 
     @Override
@@ -29,19 +29,19 @@ class MyArrayList implements List {
     }
 
     @Override
-    public boolean contains(Object o) {
-        return indexOf(o) > 0;
+    public boolean contains(E element) {
+        return indexOf(element) > 0;
     }
 
     @Override
-    public void add(Object o) {
-        add(size, o);
+    public void add(E element) {
+        add(size, element);
     }
 
     @Override
-    public boolean remove(Object o) {
+    public boolean remove(E element) {
         for (int i = 0; i < size; i++) {
-            if (o.equals(array[i])) {
+            if (element.equals(array[i])) {
                 System.arraycopy(array, i + 1, array, i, size - i - 1);
                 array[size--] = null;
                 return true;
@@ -65,26 +65,26 @@ class MyArrayList implements List {
     }
 
     @Override
-    public Object get(int index) {
+    public E get(int index) {
         validateIndex(index);
         return array[index];
     }
 
     @Override
-    public Object set(int index, Object element) {
-        Object result = get(index);
-        array[index] = element;
-        return result;
+    public E set(int index, E element) {
+        E result = get(index);
+        array[index] =  element;
+        return  result;
     }
 
     private void increaseCapacity() {
-        Object[] newArray = new Object[CAPACITY * 2];
+        E[] newArray = (E[])new Object[CAPACITY * 2];
         System.arraycopy(array, 0, newArray, 0, size);
         array = newArray;
     }
 
     @Override
-    public void add(int index, Object element) {
+    public void add(int index, E element) {
         validateIndex(index);
         if (size >= CAPACITY) {
             increaseCapacity();
@@ -95,21 +95,22 @@ class MyArrayList implements List {
     }
 
     @Override
-    public Object remove(int index) {
+    public E remove(int index) {
         validateIndex(index);
 
-        Object result = array[index];
+        E result = array[index];
         if ((size - index - 1) > 0) {
             System.arraycopy(array, index + 1, array, index, size - index - 1);
         }
         array[--size] = null;
-        return result;
+        return  result;
     }
 
+
     @Override
-    public int indexOf(Object o) {
+    public int indexOf(E element) {
         for (int i = 0; i < size; i++) {
-            if (o.equals(array[i])) {
+            if (element.equals(array[i])) {
                 return i;
             }
         }
@@ -117,9 +118,9 @@ class MyArrayList implements List {
     }
 
     @Override
-    public int lastIndexOf(Object o) {
-        for (int i = size() - 1; i >= 0; i--) {
-            if (o.equals(array[i])) {
+    public int lastIndexOf(E element) {
+        for (int i = size - 1; i >= 0; i--) {
+            if (element.equals(array[i])) {
                 return i;
             }
         }
@@ -131,4 +132,6 @@ class MyArrayList implements List {
         return Arrays.toString(Arrays.copyOf(array, size));
     }
 }
+
+
 

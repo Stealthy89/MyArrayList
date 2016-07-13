@@ -3,7 +3,7 @@ package com.yachenya.list;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MyArrayListTests extends MyArrayList {
+public class MyArrayListTests{
 
     private MyArrayList arrayList = new MyArrayList();
 
