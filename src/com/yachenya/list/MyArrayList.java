@@ -2,12 +2,6 @@ package com.yachenya.list;
 
 import java.util.Arrays;
 
-/**
- * My implementation of an array list
- *
- * @author ayachenya
- */
-
 class MyArrayList<E> implements List<E> {
 
     private static final int CAPACITY = 15;
@@ -30,7 +24,7 @@ class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(E element) {
-        return indexOf(element) > 0;
+        return indexOf(element) !=-1;
     }
 
     @Override
@@ -58,12 +52,6 @@ class MyArrayList<E> implements List<E> {
         size = 0;
     }
 
-    private void validateIndex(int index) {
-        if (index > size || index < 0) {
-            throw new IndexOutOfBoundsException();
-        }
-    }
-
     @Override
     public E get(int index) {
         validateIndex(index);
@@ -72,21 +60,23 @@ class MyArrayList<E> implements List<E> {
 
     @Override
     public E set(int index, E element) {
+        validateIndexToAdd(index);
+
         E result = get(index);
         array[index] =  element;
         return  result;
     }
 
     private void increaseCapacity() {
-        E[] newArray = (E[])new Object[CAPACITY * 2];
+        E[] newArray = (E[])new Object[array.length * 2];
         System.arraycopy(array, 0, newArray, 0, size);
         array = newArray;
     }
 
     @Override
     public void add(int index, E element) {
-        validateIndex(index);
-        if (size >= CAPACITY) {
+        validateIndexToAdd(index);
+        if (size >= array.length) {
             increaseCapacity();
         }
         System.arraycopy(array, index, array, index + 1, size - index);
@@ -130,6 +120,17 @@ class MyArrayList<E> implements List<E> {
     @Override
     public String toString() {
         return Arrays.toString(Arrays.copyOf(array, size));
+    }
+
+    private void validateIndex(int index) {
+        if (index >= size || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+    private void validateIndexToAdd(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
     }
 }
 

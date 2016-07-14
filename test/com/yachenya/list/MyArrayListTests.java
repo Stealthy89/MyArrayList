@@ -5,20 +5,16 @@ import org.junit.Test;
 
 public class MyArrayListTests{
 
-    private MyArrayList arrayList = new MyArrayList();
+    private MyArrayList<Object> arrayList = new MyArrayList<>();
 
     @Test
     public void testSize() throws Exception {
         arrayList.add(1);
         Assert.assertEquals(1, arrayList.size());
-        arrayList.add(0, 12);
-        Assert.assertEquals(2, arrayList.size());
-        arrayList.remove(0);
-        Assert.assertEquals(1, arrayList.size());
     }
 
     @Test
-    public void testIsEmpty() throws Exception {
+    public void testIsEmpty() {
         Assert.assertTrue(arrayList.isEmpty());
         arrayList.add(1);
         Assert.assertFalse(arrayList.isEmpty());
@@ -26,9 +22,7 @@ public class MyArrayListTests{
 
     @Test
     public void testContains() throws Exception {
-        arrayList.add(1);
         arrayList.add("Srt");
-        arrayList.add('&');
         Assert.assertEquals(true, arrayList.contains("Srt"));
         Assert.assertEquals(false, arrayList.contains(10));
     }
@@ -36,9 +30,6 @@ public class MyArrayListTests{
     @Test
     public void testRemove() throws Exception {
         arrayList.add("S");
-        arrayList.add("M");
-        arrayList.add("N");
-        arrayList.add("O");
         Assert.assertEquals(true, arrayList.remove("S"));
         Assert.assertEquals(false, arrayList.remove("A"));
     }
@@ -58,7 +49,7 @@ public class MyArrayListTests{
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetNegative() throws Exception {
-        arrayList.get(1);
+        arrayList.get(0);
         arrayList.get(-1);
     }
 
@@ -119,21 +110,9 @@ public class MyArrayListTests{
     }
     @Test
     public void testIncreaseCapacity() throws Exception {
-        arrayList.add(1);
-        arrayList.add(2);
-        arrayList.add(3);
-        arrayList.add(4);
-        arrayList.add(5);
-        arrayList.add(6);
-        arrayList.add(7);
-        arrayList.add(8);
-        arrayList.add(9);
-        arrayList.add(10);
-        arrayList.add(11);
-        arrayList.add(12);
-        arrayList.add(13);
-        arrayList.add(14);
-        arrayList.add(15);
+        for(int i = 0; i < 15; i++){
+            arrayList.add(i);
+        }
         Assert.assertEquals(15, arrayList.size());
         arrayList.add(16);
         Assert.assertEquals(16, arrayList.size());
