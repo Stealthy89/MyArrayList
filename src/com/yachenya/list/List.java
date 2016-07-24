@@ -1,6 +1,6 @@
 package com.yachenya.list;
 
- interface List<E> {
+public interface List<E> {
 
     int size();
 
@@ -25,5 +25,4 @@ package com.yachenya.list;
     int indexOf(E element);
 
     int lastIndexOf(E element);
-
- }
+}

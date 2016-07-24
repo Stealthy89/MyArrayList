@@ -1,4 +1,4 @@
-package com.yachenya.list;
+package com.yachenya.list.arrayList;
 
 import org.junit.Assert;
 import org.junit.Test;

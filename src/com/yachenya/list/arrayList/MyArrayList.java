@@ -1,5 +1,6 @@
-package com.yachenya.list;
+package com.yachenya.list.arrayList;
 
+import com.yachenya.list.List;
 import java.util.Arrays;
 
 class MyArrayList<E> implements List<E> {
@@ -9,7 +10,7 @@ class MyArrayList<E> implements List<E> {
     private int size;
 
     MyArrayList() {
-        array = (E[])new Object[CAPACITY];
+        array = (E[]) new Object[CAPACITY];
     }
 
     @Override
@@ -24,7 +25,7 @@ class MyArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(E element) {
-        return indexOf(element) !=-1;
+        return indexOf(element) != -1;
     }
 
     @Override
@@ -63,12 +64,12 @@ class MyArrayList<E> implements List<E> {
         validateIndexToAdd(index);
 
         E result = get(index);
-        array[index] =  element;
-        return  result;
+        array[index] = element;
+        return result;
     }
 
     private void increaseCapacity() {
-        E[] newArray = (E[])new Object[array.length * 2];
+        E[] newArray = (E[]) new Object[array.length * 2];
         System.arraycopy(array, 0, newArray, 0, size);
         array = newArray;
     }
@@ -93,7 +94,7 @@ class MyArrayList<E> implements List<E> {
             System.arraycopy(array, index + 1, array, index, size - index - 1);
         }
         array[--size] = null;
-        return  result;
+        return result;
     }
 
 
@@ -127,6 +128,7 @@ class MyArrayList<E> implements List<E> {
             throw new IndexOutOfBoundsException();
         }
     }
+
     private void validateIndexToAdd(int index) {
         if (index > size || index < 0) {
             throw new IndexOutOfBoundsException();
