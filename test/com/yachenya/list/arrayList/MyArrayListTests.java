@@ -117,4 +117,10 @@ public class MyArrayListTests{
         arrayList.add(16);
         Assert.assertEquals(16, arrayList.size());
     }
+    @Test
+    public void testToString() throws Exception {
+        arrayList.add(0,1);
+        arrayList.add(1,2);
+        arrayList.toString();
+    }
 }

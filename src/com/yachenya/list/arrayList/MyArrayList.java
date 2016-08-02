@@ -1,7 +1,6 @@
 package com.yachenya.list.arrayList;
 
 import com.yachenya.list.List;
-import java.util.Arrays;
 
 class MyArrayList<E> implements List<E> {
 
@@ -68,16 +67,10 @@ class MyArrayList<E> implements List<E> {
         return result;
     }
 
-    private void increaseCapacity() {
-        E[] newArray = (E[]) new Object[array.length * 2];
-        System.arraycopy(array, 0, newArray, 0, size);
-        array = newArray;
-    }
-
     @Override
     public void add(int index, E element) {
         validateIndexToAdd(index);
-        if (size >= array.length) {
+        if (size == array.length) {
             increaseCapacity();
         }
         System.arraycopy(array, index, array, index + 1, size - index);
@@ -120,19 +113,28 @@ class MyArrayList<E> implements List<E> {
 
     @Override
     public String toString() {
-        return Arrays.toString(Arrays.copyOf(array, size));
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[i] + " ");
+        }
+        return null;
     }
 
     private void validateIndex(int index) {
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index should be between 0 and " + size+ " inclusively");
         }
     }
 
     private void validateIndexToAdd(int index) {
         if (index > size || index < 0) {
-            throw new IndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException("Index should be between 0 and " + size);
         }
+    }
+
+    private void increaseCapacity() {
+        E[] newArray = (E[]) new Object[array.length * 2];
+        System.arraycopy(array, 0, newArray, 0, size);
+        array = newArray;
     }
 }
 

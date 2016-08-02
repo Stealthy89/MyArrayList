@@ -8,15 +8,15 @@ class MyLinkedList<E> implements List<E> {
     private Entry<E> last;
     private int size;
 
-    private void validateIndex(int index) {
-        if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException();
-        }
-    }
+    private static class Entry<E> {
+        Entry<E> prev;
+        E value;
+        Entry<E> next;
 
-    private void validateIndexToAdd(int index) {
-        if (index > size || index < 0) {
-            throw new IndexOutOfBoundsException();
+        Entry(Entry<E> prev, E value, Entry<E> next) {
+            this.prev = prev;
+            this.value = value;
+            this.next = next;
         }
     }
 
@@ -37,40 +37,52 @@ class MyLinkedList<E> implements List<E> {
 
     @Override
     public void add(E element) {
-        if (element != null) {
-            add(size, element);
-        }
+        add(size, element);
     }
 
     @Override
     public boolean remove(E element) {
-        if (element == null) {
+        for (Entry<E> f = first; f != null; f = f.next) {
+            if (f.value.equals(element)) {
+                Entry<E> previous = f.prev;
+                Entry<E> next = f.next;
+
+                if (previous == null && next == null) {
+                    first = last = null;
+                    size--;
+                } else if (previous == null) {
+                    first = next;
+                    f.next = null;
+                    next.prev = null;
+
+                    size--;
+                } else if (next == null) {
+                    f.prev = null;
+                    previous.next = null;
+                    last = previous;
+
+                    size--;
+                } else {
+                    previous.next = next;
+                    next.prev = previous;
+                    f.prev = null;
+                    f.next = null;
+                    size--;
+                }
+                return true;
+            }
             return false;
         }
-        for (Entry<E> f = first; f != null; f = f.next) {
-            if (f.element.equals(element)) {
-                if (f.prev == null) {
-                    f = first;
-                    first.next = f.next;
-                }
-                if (f.next == null) {
-                    f.prev = last;
-                } else {
-                    f.prev.next = f.next;
-                    f.next = f.prev.next;
-                }
-            }
-        }
-        size--;
-        return true;
+
+        return false;
     }
 
     @Override
     public void clear() {
 
-        for (Entry<E> f = first; f != null;) {
+        for (Entry<E> f = first; f != null; ) {
             Entry<E> next = f.next;
-            f.element = null;
+            f.value = null;
             f.prev = null;
             f.next = null;
             f = next;
@@ -80,99 +92,120 @@ class MyLinkedList<E> implements List<E> {
     }
 
     private Entry<E> entry(int index) {
-        if (index < size >> 1) {
+        validateIndexToAdd(index);
+
+        if (index < size) {
             Entry<E> f = first;
             for (int i = 0; i < index; i++) {
-                f.next = f;
+                f = f.next;
             }
             return f;
-        } else {
-            Entry<E> l = last;
-            for (int i = size - 1; i > index; i--) {
-                l = l.prev;
-            }
-            return l;
         }
+        return null;
     }
 
     @Override
     public E get(int index) {
         validateIndex(index);
-        return entry(index).element;
+        return entry(index).value;
     }
 
     @Override
     public E set(int index, E element) {
-        validateIndex(index);
+        validateIndexToAdd(index);
+
         Entry<E> entry = entry(index);
-        E old = entry.element;
-        entry.element = element;
+        E old = entry.value;
+        entry.value = element;
 
         return old;
     }
 
     @Override
-    public void add(int index, E element) {
+    public void add(int index, E value) {
         validateIndexToAdd(index);
 
-        if (element != null) {
-//add to the end of the list
-            if (index == size) {
-                Entry<E> l = last;
-                Entry<E> newEntry = new Entry<>(l, element, null);
-                last = newEntry;
-                if (l == null) {
-                    first = newEntry;
-                } else {
-                    l.next = newEntry;
-                }
-                size++;
-                //add to the specified place
+        //assume element to be included at the start of the list
+        if (index == 0) {
+            Entry<E> f = first;
+            Entry<E> newValue = new Entry<>(null, value, f);
+            if (first == null) {
+                first = last = newValue;
             } else {
-                Entry<E> current = entry(index);
-                Entry<E> previous = current.prev;
-                Entry<E> newEntry = new Entry<>(previous, element, current);
-
-                current.prev = newEntry;
-
-                if (previous == null) {
-                    first = newEntry;
-                    newEntry.next = current;
-                } else {
-                    previous.next = newEntry;
-                }
-                size++;
+                newValue.next = f;
+                newValue.prev = null;
+                f.prev = newValue;
+                //  f.prev = newValue;
+                first = newValue;
             }
+            size++;
+        }
+        //assume element to be included at the end of the list
+        else if (index == size) {
+            Entry<E> l = last;
+            Entry<E> newValue = new Entry<>(l, value, null);
+            l.next = newValue;
+            newValue.prev = l;
+            newValue.next = null;
+            last = newValue;
+            size++;
+        }
+        //assume element to be included in the middle of the list
+        else {
+            Entry<E> current = entry(index);
+            Entry<E> previous = current.prev;
+            Entry<E> newValue = new Entry<>(previous, value, current);
+            current.prev = newValue;
+            previous.next = newValue;
+            newValue.prev = previous;
+            newValue.next = current;
+
+            size++;
         }
     }
 
+
     @Override
-    public E remove(int index) {
+    public E remove(int index){
         validateIndex(index);
 
-        for (Entry<E> f = first; f != null; f = f.next) {
-            if (f.element.equals(entry(index).element)) {
-                Entry<E> prev = f.prev;
-                E current = f.element;
-                Entry<E> next = f.next;
+        //first element to be deleted
+        if (index == 0) {
+            Entry<E> f = first;
+            E result = f.value;
+            Entry<E> next = first.next;
+            first = next;
+            f.next = null;
+            next.prev = null;
 
-                if (prev == null) {
-                    first = next;
-                } else {
-                    prev.next = next;
-                    f.prev = null;
-                }
-                if (next == null) {
-                    last = prev;
-                } else {
-                    next.prev = prev;
-                    f.next = null;
-                }
-                size--;
-                return current;
-            }
+            size--;
+            return result;
         }
-        return null;
+        //last element to be deleted
+        else if (index == size) {
+            Entry<E> l = last;
+            E result = l.value;
+            Entry<E> prev = last.prev;
+            l.prev = null;
+            prev.next = null;
+            last = prev;
+            size--;
+            return result;
+        }
+        //element from the middle of the list to be deleted
+        else {
+            Entry<E> current = entry(index);
+            E result = current.value;
+            Entry<E> previous = current.prev;
+            Entry<E> next = current.next;
+            current.prev = null;
+            current.next = null;
+            previous.next = next;
+            next.prev = previous;
+
+            size--;
+            return result;
+        }
     }
 
     @Override
@@ -180,7 +213,7 @@ class MyLinkedList<E> implements List<E> {
         int index = 0;
 
         for (Entry<E> f = first; f != null; f = f.next) {
-            if (f.element.equals(element)) {
+            if (f.value.equals(element)) {
                 return index;
             }
             index++;
@@ -194,22 +227,31 @@ class MyLinkedList<E> implements List<E> {
 
         for (Entry<E> l = last; l != null; l = l.prev) {
             index--;
-            if (l.element.equals(element)) {
+            if (l.value.equals(element)) {
                 return index;
             }
         }
         return -1;
     }
 
-    private static class Entry<E> {
-        Entry<E> prev;
-        E element;
-        Entry<E> next;
+    @Override
+    public String toString() {
+        for (Entry<E> f = first; f != null; f = f.next) {
+            System.out.println(f.value);
+        }
+        return null;
+    }
 
-        Entry(Entry<E> prev, E element, Entry<E> next) {
-            this.prev = prev;
-            this.element = element;
-            this.next = next;
+    private void validateIndex(int index) {
+        if (index >= size || index < 0) {
+            throw new IndexOutOfBoundsException("Index should be between 0 and " + size + " inclusively");
         }
     }
+
+    private void validateIndexToAdd(int index) {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException("Index should be between 0 and " + size);
+        }
+    }
+
 }
